@@ -1,9 +1,30 @@
-<!DOCTYPE html>
-<head>
+<!DOCTYPE html><head>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
 <!--<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>-->
+<style>
+	#arjsDebugUIContainer, 
+	.a-enter-vr {
+		display:none!important;
+	}
+	#menu {
+		width: 100%;
+		text-align:center;
+		z-index: 3000;
+		position: absolute; 
+		bottom: 20px;
+	}
+	#play {
+		width: 200px;
+		height: 50px;
+		border-radius: 25px;
+		border: none;
+		color: white;
+		background-color: red;
+		font-size: 20px;
+	}
+</style>
 </head>
 <body style="margin : 0px; overflow: hidden;">
 	<a-scene embedded arjs="sourceType: webcam">
@@ -17,13 +38,12 @@
 		<a-marker-camera preset="hiro"></a-marker-camera>
 		<!--<a-marker-camera type="pattern" patternUrl="assets/mg-marker.patt"></a-marker-camera>-->
 	</a-scene>
-<div style="text-align:center;z-index: 3000; position: absolute; bottom: 20px;"> 
-  <button onclick="playPause()">Play/Pause</button> 
+<div id="menu"> 
+  <button onclick="playPause()" id="play">Play / Pause</button> 
 </div>
 </body>
-<style>
-	#arjsDebugUIContainer, .a-enter-vr {display:none!important;}
-</style>
+
+
 <script> 
 var myVideo = document.getElementById("vid"); 
 
