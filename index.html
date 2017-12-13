@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+<meta name="apple-mobile-web-app-capable" content="yes">
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
 <!--<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>-->
@@ -8,7 +9,7 @@
 	<a-scene embedded arjs="sourceType: webcam">
 		<a-assets>
     		<img id="pic" src="assets/test.jpg">
-			<video id="vid" src="assets/test.mp4" autoplay></video>
+			<video id="vid" src="assets/test.mp4" playsinline></video>
   		</a-assets>
 		<a-plane src="#vid" rotation="-90 0 0"></a-plane>
 		<a-marker-camera preset="hiro"></a-marker-camera>
