@@ -36,16 +36,13 @@
 			<video id="vid" src="assets/test.mp4" playsinline</video>
   		</a-assets>
 		<a-plane src="#vid" rotation="-90 0 0"></a-plane>
-		<!--<a-image src="assets/test.gif" rotation="-90 0 0"></a-image>-->
-		<a-marker-camera preset="hiro"></a-marker-camera>
-		<!--<a-marker-camera type="pattern" patternUrl="assets/pattern-marker.patt"></a-marker-camera>-->
+		<!--<a-marker-camera preset="hiro"></a-marker-camera>-->
+		<a-marker-camera type="pattern" url="assets/pattern-marker.patt"></a-marker-camera>
 	</a-scene>
 <div id="menu"> 
   <button onclick="playPause()" id="play">Play / Pause</button> 
 </div>
 </body>
-
-
 <script> 
 var myVideo = document.getElementById("vid"); 
 
